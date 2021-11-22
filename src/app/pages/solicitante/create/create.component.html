@@ -1,0 +1,70 @@
+<h1 class="app-page-title">Editar solicitante</h1>
+<hr class="mb-4">
+<div class="row g-4 settings-section">
+    <div class="col-12 col-md-4">
+        <h3 class="section-title">Datos del solicitante</h3>
+       
+    </div>
+    <div class="col-12 col-md-8">
+        <div class="app-card app-card-settings shadow-sm p-4">
+
+            <div class="app-card-body">
+                <form [formGroup]="form" (ngSubmit)="submit()" class="settings-form">
+                    <div class="mb-3">
+                        <label for="setting-input-1" class="form-label"><span class="ms-2"
+                                data-container="body" data-bs-toggle="popover" data-trigger="hover" data-placement="top"
+                                data-content="This is a Bootstrap popover example. You can use popover to provide extra info."><svg
+                                    width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg></span></label>
+                        <div class="mb-3">
+                        <label for="setting-input-2" class="form-label">Nombre</label>
+                        <input formControlName="nombre" id="nombre" type="text" class="form-control">
+                        <!--<div *ngIf="f.nombre.touched && f.nombre.invalid" class="alert alert-danger">
+                            <div *ngIf="f.nombre.errors?.required">El Nombre es requerido.</div>
+                        </div>-->
+                        </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="setting-input-2" class="form-label">Documento</label>
+                            <input formControlName="documento" id="documento" type="number" class="form-control">
+                            <!--<div *ngIf="f.documento.touched && f.documento.invalid" class="alert alert-danger">
+                                <div *ngIf="f.documento.errors?.required">Documento requerido.</div>
+                            </div>-->
+                        </div>
+                        <div class="mb-3">
+                            <label for="setting-input-3" class="form-label">Direccion</label>
+                            <input formControlName="direccion" id="direccion" type="text"  class="form-control">
+                            <!--<div *ngIf="f.direccion.touched && f.direccion.invalid" class="alert alert-danger">
+                                <div *ngIf="f.direccion.errors?.required">Direccion es requerido.</div>
+                            </div>-->
+                        </div>
+                        <div class="mb-3">
+                            <label for="setting-input-3" class="form-label">Telefono</label>
+                            <input formControlName="telefono" id="telefono" type="text"  class="form-control">
+                            <!--<div *ngIf="f.telefono.touched && f.telefono.invalid" class="alert alert-danger">
+                                <div *ngIf="f.telefono.errors?.required">Telefono es requerido.</div>
+                            </div>-->
+                        </div>
+                        <div class="mb-3">
+                            <label for="setting-input-3" class="form-label">Servicio</label>
+                            <input formControlName="servicio_id" id="servicio_id" type="number"  class="form-control">
+                            <!--<div *ngIf="f.servicio_id.touched && f.servicio_id.invalid" class="alert alert-danger">
+                                <div *ngIf="f.servicio_id.errors?.required">Servicio es requerido.</div>
+                            </div>-->
+                        </div>
+                        <a href="#" routerLink="/solicitante/index" class="btn app-btn-secondary  mx-1 ">Cancelar</a>
+                        <button type="submit" class="btn app-btn-primary" [disabled]="!form.valid">Crear</button>
+                </form>
+            </div>
+            <!--//app-card-body-->
+
+        </div>
+        <!--//app-card-->
+    </div>
+</div>

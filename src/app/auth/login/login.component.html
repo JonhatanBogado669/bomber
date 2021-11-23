@@ -4,8 +4,9 @@
       <div class="app-auth-body mx-auto">
         <div class="app-auth-branding"><a class="app-logo" href="login"><img class="logo-icon me-2"
               src="assets/images/user.png" alt="logo"></a></div>
-        <h2 class="auth-heading text-center mb-5">Login</h2>
-        <div class="auth-form-container text-start">
+         <h2 class="auth-heading text-center mb-5">Login</h2>
+          <div class="auth-form-container text-start">
+          <!--Formulario para inicio de sesion-->  
           <form [formGroup]="loginForm" (ngSubmit)="login()" class="auth-form login-form">
             <div class="email mb-3">
               <label class="sr-only" for="signin-email">Email</label>
@@ -29,7 +30,7 @@
                 <!--//col-6-->
                 <div class="col-6">
                   <div class="forgot-password text-end">
-                    <a href="reset-password.html">Forgot password?</a>
+                    <a>Forgot password?</a>
                   </div>
                 </div>
                 <!--//col-6-->

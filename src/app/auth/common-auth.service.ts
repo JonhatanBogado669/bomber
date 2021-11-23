@@ -15,7 +15,7 @@ export interface DataLogin{
 export class CommonAuthService {
 
   constructor(private http: HttpClient) { }
-  apiUrl: string = 'http://bogadoprueba.test/api/'; 
+  apiUrl: string = 'http://bombero.test/api/'; 
   loggedIn = false;
 
   registerUser(form: any){

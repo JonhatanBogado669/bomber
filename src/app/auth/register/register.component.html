@@ -1,65 +1,58 @@
-<div class="row">
-    <div class="col-md-4 offset-md-4">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title text-center">Register</h5>
-                <hr>
-              </div>
-              <div class="card-body">
-                <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+<div class="app-auth-wrapper">
+  <div class=" text-center p-5">
+    <div class="d-flex flex-column align-content-end">
+      <div class="app-auth-body mx-auto">
+        <h2 class="auth-heading text-center mb-5">Register</h2>
+        <div class="auth-form-container text-start">
+          <!--Formulario para registro de usuario-->
+               <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
+                    <div class="mb-3">
+                      <div class="form-group">
                         <label>Nombre</label>
                         <input type="text" formControlName="name" class="form-control" placeholder="name" required>
-                      
                         <small id="emailHelp" class="form-text text-muted" *ngIf="serverErrors">{{ serverErrors }}</small>
-
-                        </div>
+                      </div>
                     </div>
-                </div>
-                        
-                  <div class="row">
-
-                    <div class="col-md-12">
-                      <div class="form-group">
+                </div>    
+                <div class="row">
+                  <div class="mb-3">
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Correo</label>
                         <input type="email" formControlName="email" class="form-control" placeholder="ingrese un correo valido" required>
-                  
                         <small id="emailHelp" class="form-text text-muted" *ngIf="serverErrors">{{ serverErrors }}</small>
                       </div>
                     </div>
                   </div>
-                  
                   <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
+                    <div class="mb-3">
+                      <div class="form-group">
                         <label>Password</label>
                         <input type="password" formControlName="password" class="form-control" placeholder="Password" required>
-
                         <small id="emailHelp" class="form-text text-muted" *ngIf="serverErrors">{{ serverErrors }}</small>
                         </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
+                    <div class="mb-3">
+                      <div class="form-group">
                         <label>Confirm Password</label>
                         <input type="password" formControlName="password_confirmation" class="form-control" placeholder="Confirm Password" required>
-
-
                         <small id="emailHelp" class="form-text text-muted" *ngIf="serverErrors">{{ serverErrors }}</small>
                         </div>
                     </div>
                 </div>
-
-                  <div class="row">
-                    <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round" [disabled]="!registerForm.valid">Registrar</button>
+                <div class="row">
+                  <div class="mb-3">
+                    <div class="form-group">
+                        <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto" [disabled]="!registerForm.valid">Registrar</button>
                     </div>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
-</div>
+        </div>
+      </div>
+    </div>
+   
